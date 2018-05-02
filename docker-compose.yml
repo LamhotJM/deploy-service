@@ -1,7 +1,7 @@
 version: '1'
 services:
-  aleppo:
-    # path to Aleppo
+  splitter:
+    # path to Splitter
     build: ../splitter
     ports:
       - "6643"
