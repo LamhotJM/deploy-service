@@ -1,0 +1,10 @@
+version: '1'
+services:
+  aleppo:
+    # path to Aleppo
+    build: ../splitter
+    ports:
+      - "6643"
+    volumes:
+      - .:/splitter
+    network_mode: host
