@@ -18,7 +18,7 @@ services:
     network_mode: host
   splitter:
     # path to splitter
-    build: ../deploy/_output/splitter
+    build: ../splitter
     ports:
       - "6643"
     volumes:
