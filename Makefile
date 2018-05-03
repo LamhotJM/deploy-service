@@ -1,6 +1,6 @@
 all-dtb: build-all dtb
 build-all:
-	cd ../splitter;make dep;dep ensure;make build;./splitter&
+	cd ../splitter;make dep;dep ensure;make build;./splitter&;sleep 2;echo "succeed"
 dtb:
 	docker-compose build splitter
 	docker-compose up
