@@ -1,10 +1,26 @@
 version: '2'
 services:
+  aleppo:
+    # path to Aleppo
+    build: ../aleppo
+    ports:
+      - "8089"
+    volumes:
+      - .:/dtb
+    network_mode: host
+  now-you-see-me:
+    # path to Now You See Me
+    build: ../now-you-see-me
+    ports:
+      - "6622"
+    volumes:
+      - .:/dtb
+    network_mode: host
   splitter:
-    # path to Splitter
+    # path to splitter
     build: ../splitter
     ports:
       - "6643"
     volumes:
-      - .:/splitter
+      - .:/dtb
     network_mode: host
