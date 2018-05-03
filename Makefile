@@ -7,4 +7,4 @@ dtb:
 clean:
 	docker-compose down
 delete-images:
-	ps axf | grep splitter | grep -v grep | awk '{print "kill -9 " $1}'
+	ps axf | grep splitter | grep -v grep | awk '{print "kill -9 " $1}' | sh
