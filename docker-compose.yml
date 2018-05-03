@@ -17,7 +17,6 @@ services:
       - .:/dtb
     network_mode: host
   splitter:
-    image: registry.bukalapak.io/sre/gudang/pre-build/golang:0.1.0
     # path to splitter
     build: ../deploy/_output/splitter
     ports:
