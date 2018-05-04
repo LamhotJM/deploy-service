@@ -1,6 +1,6 @@
 all-dtb: build-all dtb
 build-all:
-	cd ../splitter;make dep GOOS=linux GOARCH=amd64 CGO_ENABLED=0;dep ensure;make build;./splitter&;sleep 2;echo "succeed"
+	cd ../splitter;GOOS=linux GOARCH=amd64 CGO_ENABLED=0 make dep;dep ensure;make build;./splitter&;sleep 2;echo "succeed"
 dtb:
 	docker-compose build splitter
 	docker-compose up
