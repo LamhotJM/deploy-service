@@ -17,9 +17,6 @@ case "$1" in
    cd aleppo
    exec ./aleppo &
    cd ..
-   cd now-you-see-me
-   exec deploy/_output/api/bin/api app/api/main.go &
-   cd ..
    cd chronos
    exec deploy/_output/api/bin/api &
     ;;
