@@ -20,6 +20,17 @@ case "$1" in
    cd chronos
    exec deploy/_output/api/bin/api &
     ;;
+   install_go)
+   echo bukalapak| sudo apt-get update
+   echo bukalapak| sudo apt-get -y upgrade
+   echo bukalapak| sudo curl -O sudo curl -O https://storage.googleapis.com/golang/go1.9.1.linux-amd64.tar.gz
+   echo bukalapak| sudo tar -xvf go1.9.1.linux-amd64.tar.gz
+   echo bukalapak| sudo mv go /usr/local
+   export GOROOT=/usr/local/go
+   export GOPATH=$HOME/work
+   export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
+   echo bukalapak| source ~/.bashrc
+    ;;
   stop)
     kill $(lsof -t -i:6643)
     ;;
