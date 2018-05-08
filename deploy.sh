@@ -6,6 +6,15 @@ case "$1" in
     make build;
     exec ./splitter &
     ;;
+  run-all)
+   kill $(lsof -t -i:6643)
+   kill $(lsof -t -i:8089)
+   cd splitter
+   exec ./splitter &
+   cd ..
+   cd aleppo
+   exec ./aleppo &
+    ;;
   stop)
     kill $(lsof -t -i:6643)
     ;;
