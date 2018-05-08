@@ -6,7 +6,7 @@ case "$1" in
     make build;
     exec ./splitter &
     ;;
-  run-all)
+  run_all)
    kill $(lsof -t -i:6643)
    kill $(lsof -t -i:6622)
    kill $(lsof -t -i:6619)
