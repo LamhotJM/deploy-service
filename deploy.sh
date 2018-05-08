@@ -1,10 +1,10 @@
 #!bin/bash
 case "$1" in
   start)
-    ps axf | grep splitter | grep -v grep | awk '{print "kill -9 " $1}' | sh;
+    ps axf | grep $service | grep -v grep | awk '{print "kill -9 " $1}' | sh;
     dep ensure;
     make build;
-    exec ./splitter &
+    exec ./$service &
     ;;
   stop)
     kill $(lsof -t -i:6643)
